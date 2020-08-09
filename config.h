@@ -67,8 +67,8 @@ static const struct arg args[] = {
 	{ wifi_perc,      "%s%%  ",  "wlp3s0" }, 
 	{ battery_perc,    "%s%%/", "BAT0" },
 	{ battery_perc,    "%s%%  ", "BAT1" },
-	{ run_command,    "  %s:", "amixer get Master | awk -F'[][]' 'END{ print $1 }'" },
-	{ run_command,    " %s  ", "amixer get Master | awk -F'[][]' 'END{ print $3 }'" },
+	{ run_command,    "  %s: ", "amixer get Master | awk -F'[][]' 'END{ print $2 }'" },
+	{ run_command,    "%s  ", "amixer get Master | awk -F'[][]' 'END{ print $4 }'" },
 	{ datetime,    "%s",        "%a %B %d, %Y  " },
 	{ datetime,    "%s",        "%I:%M %p" },
 };
